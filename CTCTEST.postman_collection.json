@@ -1,0 +1,1950 @@
+{
+	"info": {
+		"_postman_id": "d2f8e060-d621-4fe4-a188-3f2416df0482",
+		"name": "CTC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25945750"
+	},
+	"item": [
+		{
+			"name": "AllConsultants",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9x9rgnoxi7.execute-api.ap-south-1.amazonaws.com/uat/",
+					"protocol": "https",
+					"host": [
+						"9x9rgnoxi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateConsultant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"details\":\"DataAnalyst\",\"name\":\"Mamta kalwade\",\"email\":\"mamtakalwade09@gmail.com\",\"country\":\"India\",\"city\":\"Bhaisa\",\"state\":\"Telangana\",\"mobile_number\":\"+918666897811\",\"address\":\"Queta colony\",\"experience\":1,\"category\":\"education\",\"sub_category\":[\"domestic\"],\"pin_code\":\"440067\",\"cost_per_hour\":234,\"qualification\":\"Bachelors of Engineering\",\"certification\":[],\"awards\":[],\"preferred_language\":\"English\",\"known_languages\":[\"English\"],\"avg_rating\":1,\"status\":true,\"rating\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://42wtpborde.execute-api.ap-south-1.amazonaws.com/uat/create",
+					"protocol": "https",
+					"host": [
+						"42wtpborde",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateConsultant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"CTC-902a84c4-3f04-11ed-8152-13f334714291\",\r\n    \"name\": \"Kranti Burghate\",\r\n    \"mobile_number\": \"+917517393314\",\r\n    \"email\": \"kranti@appliedaiconsulting.com\",\r\n    \"details\": \"About Consultant\",\r\n    \"address\": \"Viman Nagar\",\r\n    \"country\": \"India\",\r\n    \"state\": \"Maharashtra\",\r\n    \"city\": \"Pune\",\r\n    \"pin_code\": \"411015\",\r\n    \"rating\": true,\r\n    \"avg_rating\": 5,\r\n    \"qualification\": \"B. Tech.\",\r\n    \"certification\": [\r\n        \"AWS\"\r\n    ],\r\n    \"experience\": 13,\r\n    \"category\": \"engineer\",\r\n    \"sub_category\": [\r\n        \"software\"\r\n    ],\r\n    \"awards\": [\r\n        \"Some awards\"\r\n    ],\r\n    \"cost_per_hour\": 10500,\r\n    \"preferred_language\": \"English\",\r\n    \"known_languages\": [\r\n        \"English\",\r\n        \"Hindi\",\r\n        \"Telgu\"\r\n    ],\r\n    \"status\": true,\r\n    \"image_url\": \"https://ctcprofileimgbucket.s3.ap-south-1.amazonaws.com/CTC-902a84c4-3f04-11ed-8152-13f334714291.png\",\r\n    \"meeting_count\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9x9rgnoxi7.execute-api.ap-south-1.amazonaws.com/uat/update",
+					"protocol": "https",
+					"host": [
+						"9x9rgnoxi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubCategory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9x9rgnoxi7.execute-api.ap-south-1.amazonaws.com/uat/home/all/engineer/software",
+					"protocol": "https",
+					"host": [
+						"9x9rgnoxi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"home",
+						"all",
+						"engineer",
+						"software"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData[1].known_languages).to.be.a(\"array\");\r",
+							"  \r",
+							"      pm.expect(jsonData[1].sub_category).to.be.a(\"array\");\r",
+							"       pm.expect(jsonData[1].avg_rating).to.be.a(\"number\");\r",
+							"        pm.expect(jsonData[1].email).to.be.a(\"string\");\r",
+							"         pm.expect(jsonData[1].pin_code).to.be.a(\"string\");\r",
+							"  \r",
+							"  \r",
+							"//  pm.expect(jsonData[1].ID).to.be.a(\"string\");\r",
+							"//  pm.expect(jsonData[1].CreatedAt).to.be.a(\"string\");\r",
+							"//  pm.expect(jsonData[1].Location[0]).to.be.a(\"string\");\r",
+							"//   pm.expect(jsonData[1].Keywords).to.be.a(\"string\");\r",
+							"//   pm.expect(jsonData[1].Name).to.be.a(\"string\");\r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9x9rgnoxi7.execute-api.ap-south-1.amazonaws.com/uat/home/all/engineer",
+					"protocol": "https",
+					"host": [
+						"9x9rgnoxi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"home",
+						"all",
+						"engineer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateConsultantImageUpload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/mamta.kalwade_applie/Pictures/docker.png"
+					}
+				},
+				"url": {
+					"raw": "https://42wtpborde.execute-api.ap-south-1.amazonaws.com/uat/image_upload/CTC-4a6c3471-a075-11ed-a811-b9e73391660b",
+					"protocol": "https",
+					"host": [
+						"42wtpborde",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"image_upload",
+						"CTC-4a6c3471-a075-11ed-a811-b9e73391660b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateMeetingslots",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });\r",
+							"  "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NTY3NDg2LCJ1c2VyX2lkIjoiR2tsVkllVHdIWU9PNXZZazFEUGIweGNhRGVQMiIsInN1YiI6IkdrbFZJZVR3SFlPTzV2WWsxRFBiMHhjYURlUDIiLCJpYXQiOjE2Nzk1Njc0ODYsImV4cCI6MTY3OTU3MTA4NiwicGhvbmVfbnVtYmVyIjoiKzkxNzA1ODY1MDQzMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxNzA1ODY1MDQzMCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.l4ex3U2OiuJzIIKBnM3a392G9aZYkATyRSlmElFMcStQTt2Tr2iW6qdyrULlDJfH_mzgBroRlcbQ01QYqV6O-GS8E82iOIvQMHYcNIwaKrQgqPlgK0ZCoEJXW_8o9isi8_fvH-BO4LG3nmI1iyHfPvlWB0o_vvAf2YTJwlcCeIhuP4fyToBG9yn8fi60Hy8LD21S7GCSG0lxYxaBFN_Hed2cIetElTt9oscd77JBqO85lI9bzbuRr4oquJCHREbR91WeAdGyyqFjyC_bcN8s5N8-Gu8rgyyXALRLh_wqO_7LcbGb_5aJO1THiU5GJVyGyKlfGFLAM6FTligzLz5h-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"availability\":[{\"id\":0,\"day\":\"Monday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]},{\"id\":1,\"day\":\"Tuesday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]},{\"id\":2,\"day\":\"Wednesday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]},{\"id\":3,\"day\":\"Thursday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]},{\"id\":4,\"day\":\"Friday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]},{\"id\":5,\"day\":\"Saturday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]},{\"id\":6,\"day\":\"Sunday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 08:00:00\",\"end\":\"2022-02-21 22:00:00\"}]}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://3npd3j4n35.execute-api.ap-south-1.amazonaws.com/uat/create/CTC-39bb2010-b36a-11ed-b7ea-f3074e5638f5",
+					"protocol": "https",
+					"host": [
+						"3npd3j4n35",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"create",
+						"CTC-39bb2010-b36a-11ed-b7ea-f3074e5638f5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindConsultant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData[1].known_languages).to.be.a(\"array\");\r",
+							"  \r",
+							"      pm.expect(jsonData[1].sub_category).to.be.a(\"array\");\r",
+							"       pm.expect(jsonData[1].avg_rating).to.be.a(\"number\");\r",
+							"        pm.expect(jsonData[1].email).to.be.a(\"string\");\r",
+							"         pm.expect(jsonData[1].pin_code).to.be.a(\"string\");\r",
+							"  \r",
+							"  });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY3VzdG9tZXIiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NjI4MzY4LCJ1c2VyX2lkIjoiSWNWNTRnZzhBZ1Y0bVE2MDN0TVduT2FISHptMSIsInN1YiI6IkljVjU0Z2c4QWdWNG1RNjAzdE1Xbk9hSEh6bTEiLCJpYXQiOjE2Nzk2MjgzNjgsImV4cCI6MTY3OTYzMTk2OCwicGhvbmVfbnVtYmVyIjoiKzkxODc2Njg5NzgxMSIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxODc2Njg5NzgxMSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.nThe_HKz6uFyKi-xjDChQy4RIRtVRusM0sgJe2Y9Drcd_I1iLdijSTN-QGCbaU6-Q58-w_Y4HueKdu5T9QjsQtUwwvU9Htxbhl4rc6PwbHcbStk8tiViMMind9x_nd2CpsNima3IMXZw4_mUCuMvWbEs2tR5c7bWYDa4FyvlKBDUb20FyKVxxT_Du6DmYvYUQQJ6bRWVuABAbDJ__FrqaDOyntDaNjgkvHNpTc5GXmgMaIWqI9lKmsTY2oeWdoRdSr1QQPP5VQ5xxkfEknh7LhgDQ9FxMbJ18i7ZFHZtle_gv6QdpiFxhapQpnBnMqR02Kip98aOnuPcUP9Hw638sw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://9x9rgnoxi7.execute-api.ap-south-1.amazonaws.com/uat/home/cost_per_hour:0-5000,avg_rating:1,experience:0-75",
+					"protocol": "https",
+					"host": [
+						"9x9rgnoxi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"home",
+						"cost_per_hour:0-5000,avg_rating:1,experience:0-75"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultantProfile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// const jsonData = pm.response.json();\r",
+							"// pm.test(\"Verify jsondata response\", () => {\r",
+							"//   pm.expect(jsonData).to.be.an(\"object\");\r",
+							"//    });\r",
+							"  "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://42wtpborde.execute-api.ap-south-1.amazonaws.com/uat/consultant_profile",
+					"protocol": "https",
+					"host": [
+						"42wtpborde",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"consultant_profile"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultantAvailability",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData[1].time).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[1].status).to.be.a(\"string\");\r",
+							" \r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://3npd3j4n35.execute-api.ap-south-1.amazonaws.com/uat/consultant/CTC-d46db2e7-9650-11ed-8768-dbe276d2d75b/date/2023-03-30/duration/0.5",
+					"protocol": "https",
+					"host": [
+						"3npd3j4n35",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"consultant",
+						"CTC-d46db2e7-9650-11ed-8768-dbe276d2d75b",
+						"date",
+						"2023-03-30",
+						"duration",
+						"0.5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAvailability",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"  "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk3OWVkMTU1OTdhYjM1Zjc4MjljZTc0NDMwN2I3OTNiN2ViZWIyZjAiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODAxNzY1MjIsInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDE3NjUyMiwiZXhwIjoxNjgwMTgwMTIyLCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.ViEWVIsPNpWs-Pthcv45I9eTZxCkWC0P5-Jhhhsx1kzd1tKVl78YhmMBUAVvk7efMtBKWAVxqgFhLygG_XjRV_OmGrwD5Jj4f7vRGIJcqSLBVIT2LKC3NQL2kSvg4df_TM74Zq8SpJ7niO0Z3dlHyh7gH-xgrv5SqtTSERx-cLZlxJmRQsbRHJ4tC0Qt2xqGVvHuh9Bx5J3xOXnJsNgO0NBMh4oWTg03bZ9y3n8yTBLxwoM8gSQ65mFmunkiedqZ5JE6UakxKjt8V24HajZrIfe_LVSdLtxqcVwQybnJRnLU0w5oM1vDjtExD42mzAPuZfRvFbszOd-wyQfLulJ3lg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"availability\":[{\"id\":0,\"day\":\"Monday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 10:00:00\",\"end\":\"2022-02-21 23:30:00\"}]},{\"id\":1,\"day\":\"Tuesday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 10:00:00\",\"end\":\"2022-02-21 23:30:00\"}]},{\"id\":2,\"day\":\"Wednesday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 10:00:00\",\"end\":\"2022-02-21 23:30:00\"}]},{\"id\":3,\"day\":\"Thursday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 10:00:00\",\"end\":\"2022-02-21 23:30:00\"}]},{\"id\":4,\"day\":\"Friday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 10:00:00\",\"end\":\"2022-02-21 23:30:00\"}]},{\"id\":5,\"day\":\"Saturday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 10:00:00\",\"end\":\"2022-02-21 23:30:00\"}]},{\"id\":6,\"day\":\"Sunday\",\"isChecked\":true,\"timeSlots\":[{\"start\":\"2022-02-21 09:00:00\",\"end\":\"2022-02-21 23:30:00\"}]}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://3npd3j4n35.execute-api.ap-south-1.amazonaws.com/uat/update/CTC-d46db2e7-9650-11ed-8768-dbe276d2d75b",
+					"protocol": "https",
+					"host": [
+						"3npd3j4n35",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"update",
+						"CTC-d46db2e7-9650-11ed-8768-dbe276d2d75b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
+							" \r",
+							"  });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1YzJiNDBhYTJmMzIyNzk4NjY2YTZiMzMyYWFhMDNhNjc3MzAxOWIiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY3VzdG9tZXIiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc3MjM1MTk2LCJ1c2VyX2lkIjoiUEFSMVM2b3lnUFVKQzhZZ1N2emJtekZtZlp5MiIsInN1YiI6IlBBUjFTNm95Z1BVSkM4WWdTdnpibXpGbWZaeTIiLCJpYXQiOjE2NzcyMzkyNTYsImV4cCI6MTY3NzI0Mjg1NiwicGhvbmVfbnVtYmVyIjoiKzkxODc2Njg5NzgxMSIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxODc2Njg5NzgxMSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.409n20WXYrBTByWPi65OabPhJOMIAi1y7YX-jCqpMT7oVuC_RR8e5-0vbJORDXViFbIPwZdqmLeniZiZFOY5LqMLDcQYBlloC3xAVZ0LvLBSuSyotJnnqVy-omk-y3zjnJHcvyNJuySYouJ8UhK54yWLSzZBPj67XLQNlcrDUjHHIpn0UAwgQx9wAbcrLGsa06Y2mDNIvlP90LMbB4IHpVoo3hqcSQYGwz0qSOwyPj-Dd8f4ZJRMwD2fwsM_f9-DYROrXMliIW6o_s78zxKvCQejmGOH8ytKWxq8PxDff9qAxtfNqaCt_Uf90_192D0sFJFafV9YN5tTlgb5nbVxSw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"consultant_id\":\"CTC-352bf5d0-9593-11ed-8678-8ff3653c1446\",\"start_time\":\"2023-02-24 18:30:00\",\"end_time\":\"2023-02-24 19:00:00\",\"booked_dict\":{\"status\":\"booked\",\"time\":\"2023-02-24 18:30:00\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://k1gw9ntm66.execute-api.ap-south-1.amazonaws.com/uat/CTC-352bf5d0-9593-11ed-8678-8ff3653c1446/2023-02-24T18:30:00",
+					"protocol": "https",
+					"host": [
+						"k1gw9ntm66",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"CTC-352bf5d0-9593-11ed-8678-8ff3653c1446",
+						"2023-02-24T18:30:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultant_appointment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/consultant_appointment",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"consultant_appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_meeting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"consultant_id\":\"CTC-d46db2e7-9650-11ed-8768-dbe276d2d75b\",\"selected_slot\":\"2023-03-30T19:30:00\",\"reschedule_count\":0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/create_meeting",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"create_meeting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getbooked_meeting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/booked_meeting",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"booked_meeting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload_document",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/mamta.kalwade_applie/Downloads/ctccccc.jpg"
+					}
+				},
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/upload_document/197a1a75-c87e-11ed-a4f7-6d129648c76d/ctccccc.jpg",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"upload_document",
+						"197a1a75-c87e-11ed-a4f7-6d129648c76d",
+						"ctccccc.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisputeMeeting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://f8bcz6c3ha.execute-api.ap-south-1.amazonaws.com/uat/dispute_meeting/2023",
+					"protocol": "https",
+					"host": [
+						"f8bcz6c3ha",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"dispute_meeting",
+						"2023"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Meeting_rating",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" //pm.expect(jsonData.is_ratable).to.be.a(\"value\");\r",
+							" pm.expect(jsonData.total_amount_payable).to.be.a(\"number\");\r",
+							" pm.expect(jsonData.created_by).to.be.a(\"string\");\r",
+							" pm.expect(jsonData.consultant_rating).to.be.a(\"number\");\r",
+							" pm.expect(jsonData.createdAt).to.be.a(\"string\");\r",
+							" pm.expect(jsonData.customer_id).to.be.a(\"string\");\r",
+							" pm.expect(jsonData.reschedule_count).to.be.a(\"number\");\r",
+							" pm.expect(jsonData.payment_id).to.be.a(\"string\");\r",
+							" pm.expect(jsonData.updated_by).to.be.a(\"string\");\r",
+							" \r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"meeting_rating\":1,\"meet_rate_status\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/meeting_rating/161fece5-414d-11ed-9776-3fe3e51683c1",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"meeting_rating",
+						"161fece5-414d-11ed-9776-3fe3e51683c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit_rating",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"consultant_rating\":5,\"rating_status\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/submit_rating/161fece5-414d-11ed-9776-3fe3e51683c1",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"submit_rating",
+						"161fece5-414d-11ed-9776-3fe3e51683c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetConsultantsId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.consultant_id).to.be.a(\"string\");\r",
+							" //  pm.expect(jsonData.dispute).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.start_date).to.be.a(\"string\");\r",
+							"     pm.expect(jsonData.availability).to.be.a(\"array\");\r",
+							"    \r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://3npd3j4n35.execute-api.ap-south-1.amazonaws.com/uat/get/CTC-902a84c4-3f04-11ed-8152-13f334714291",
+					"protocol": "https",
+					"host": [
+						"3npd3j4n35",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"get",
+						"CTC-902a84c4-3f04-11ed-8152-13f334714291"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilterConsultant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"  \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://9x9rgnoxi7.execute-api.ap-south-1.amazonaws.com/uat/filter/cost_per_hour:0-5000,avg_rating:1,experience:0-75",
+					"protocol": "https",
+					"host": [
+						"9x9rgnoxi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"filter",
+						"cost_per_hour:0-5000,avg_rating:1,experience:0-75"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProfileofConsultant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NjAxMjI1LCJ1c2VyX2lkIjoibjdicm1DYUdEUWg0ZUJ3aG9YYUdyMlgyYWVHMyIsInN1YiI6Im43YnJtQ2FHRFFoNGVCd2hvWGFHcjJYMmFlRzMiLCJpYXQiOjE2Nzk2MDEyMjUsImV4cCI6MTY3OTYwNDgyNSwicGhvbmVfbnVtYmVyIjoiKzkxOTA5NzI5MjM4NSIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxOTA5NzI5MjM4NSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.i0J5Iw71WR6iIQd1oOqSyMZETgUmuoILwojgP7BxrDHmJJ_rCqsvegL3TLYte1g79B20kh4-iQwMXWkNMmjK8510q4TaVL6HJs-gw0gEbSx7JwzIa5wY1STWhaAAc6f3dVPlGwz_3FE84hZTKeJIcHH9rIyi94ZW8B-lJKldfnyUYx-MTWYWVB_q79Fw5oBMmjM-PKq4MEvF8jOAVunk8SZgmLHj485bRMHMfJiQI4_YYFyMDlCZ0cRKQdm_KSEz4pFsnneUW-4VefZinvYXVQc1nvuhHbuoTX_t_bdjPPdSg9I2A7EZe0_4BdOgjMv0s9a7c9Bk0DCMwvS5kpF9wQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://42wtpborde.execute-api.ap-south-1.amazonaws.com/uat/profile/CTC-4a6c3471-a075-11ed-a811-b9e73391660b",
+					"protocol": "https",
+					"host": [
+						"42wtpborde",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"profile",
+						"CTC-4a6c3471-a075-11ed-a811-b9e73391660b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerAccStatement",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NTY3NDg2LCJ1c2VyX2lkIjoiR2tsVkllVHdIWU9PNXZZazFEUGIweGNhRGVQMiIsInN1YiI6IkdrbFZJZVR3SFlPTzV2WWsxRFBiMHhjYURlUDIiLCJpYXQiOjE2Nzk1Njc0ODYsImV4cCI6MTY3OTU3MTA4NiwicGhvbmVfbnVtYmVyIjoiKzkxNzA1ODY1MDQzMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxNzA1ODY1MDQzMCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.l4ex3U2OiuJzIIKBnM3a392G9aZYkATyRSlmElFMcStQTt2Tr2iW6qdyrULlDJfH_mzgBroRlcbQ01QYqV6O-GS8E82iOIvQMHYcNIwaKrQgqPlgK0ZCoEJXW_8o9isi8_fvH-BO4LG3nmI1iyHfPvlWB0o_vvAf2YTJwlcCeIhuP4fyToBG9yn8fi60Hy8LD21S7GCSG0lxYxaBFN_Hed2cIetElTt9oscd77JBqO85lI9bzbuRr4oquJCHREbR91WeAdGyyqFjyC_bcN8s5N8-Gu8rgyyXALRLh_wqO_7LcbGb_5aJO1THiU5GJVyGyKlfGFLAM6FTligzLz5h-w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://q7iy8pwlwb.execute-api.ap-south-1.amazonaws.com/uat/accountstatement/6",
+					"protocol": "https",
+					"host": [
+						"q7iy8pwlwb",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"accountstatement",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerUpdateimage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NTY3NDg2LCJ1c2VyX2lkIjoiR2tsVkllVHdIWU9PNXZZazFEUGIweGNhRGVQMiIsInN1YiI6IkdrbFZJZVR3SFlPTzV2WWsxRFBiMHhjYURlUDIiLCJpYXQiOjE2Nzk1Njc0ODYsImV4cCI6MTY3OTU3MTA4NiwicGhvbmVfbnVtYmVyIjoiKzkxNzA1ODY1MDQzMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxNzA1ODY1MDQzMCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.l4ex3U2OiuJzIIKBnM3a392G9aZYkATyRSlmElFMcStQTt2Tr2iW6qdyrULlDJfH_mzgBroRlcbQ01QYqV6O-GS8E82iOIvQMHYcNIwaKrQgqPlgK0ZCoEJXW_8o9isi8_fvH-BO4LG3nmI1iyHfPvlWB0o_vvAf2YTJwlcCeIhuP4fyToBG9yn8fi60Hy8LD21S7GCSG0lxYxaBFN_Hed2cIetElTt9oscd77JBqO85lI9bzbuRr4oquJCHREbR91WeAdGyyqFjyC_bcN8s5N8-Gu8rgyyXALRLh_wqO_7LcbGb_5aJO1THiU5GJVyGyKlfGFLAM6FTligzLz5h-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/mamta.kalwade_applie/Downloads/ctccccc.jpg"
+					}
+				},
+				"url": {
+					"raw": "https://q7iy8pwlwb.execute-api.ap-south-1.amazonaws.com/uat/image_upload",
+					"protocol": "https",
+					"host": [
+						"q7iy8pwlwb",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"image_upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customerupdate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NTY3NDg2LCJ1c2VyX2lkIjoiR2tsVkllVHdIWU9PNXZZazFEUGIweGNhRGVQMiIsInN1YiI6IkdrbFZJZVR3SFlPTzV2WWsxRFBiMHhjYURlUDIiLCJpYXQiOjE2Nzk1Njc0ODYsImV4cCI6MTY3OTU3MTA4NiwicGhvbmVfbnVtYmVyIjoiKzkxNzA1ODY1MDQzMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxNzA1ODY1MDQzMCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.l4ex3U2OiuJzIIKBnM3a392G9aZYkATyRSlmElFMcStQTt2Tr2iW6qdyrULlDJfH_mzgBroRlcbQ01QYqV6O-GS8E82iOIvQMHYcNIwaKrQgqPlgK0ZCoEJXW_8o9isi8_fvH-BO4LG3nmI1iyHfPvlWB0o_vvAf2YTJwlcCeIhuP4fyToBG9yn8fi60Hy8LD21S7GCSG0lxYxaBFN_Hed2cIetElTt9oscd77JBqO85lI9bzbuRr4oquJCHREbR91WeAdGyyqFjyC_bcN8s5N8-Gu8rgyyXALRLh_wqO_7LcbGb_5aJO1THiU5GJVyGyKlfGFLAM6FTligzLz5h-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"city\":null,\"state\":\"Chandigarh\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://q7iy8pwlwb.execute-api.ap-south-1.amazonaws.com/uat/update",
+					"protocol": "https",
+					"host": [
+						"q7iy8pwlwb",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://f8bcz6c3ha.execute-api.ap-south-1.amazonaws.com/uat/report/2023/01",
+					"protocol": "https",
+					"host": [
+						"f8bcz6c3ha",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"report",
+						"2023",
+						"01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SummaryofYear",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NTY3NDg2LCJ1c2VyX2lkIjoiR2tsVkllVHdIWU9PNXZZazFEUGIweGNhRGVQMiIsInN1YiI6IkdrbFZJZVR3SFlPTzV2WWsxRFBiMHhjYURlUDIiLCJpYXQiOjE2Nzk1Njc0ODYsImV4cCI6MTY3OTU3MTA4NiwicGhvbmVfbnVtYmVyIjoiKzkxNzA1ODY1MDQzMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxNzA1ODY1MDQzMCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.l4ex3U2OiuJzIIKBnM3a392G9aZYkATyRSlmElFMcStQTt2Tr2iW6qdyrULlDJfH_mzgBroRlcbQ01QYqV6O-GS8E82iOIvQMHYcNIwaKrQgqPlgK0ZCoEJXW_8o9isi8_fvH-BO4LG3nmI1iyHfPvlWB0o_vvAf2YTJwlcCeIhuP4fyToBG9yn8fi60Hy8LD21S7GCSG0lxYxaBFN_Hed2cIetElTt9oscd77JBqO85lI9bzbuRr4oquJCHREbR91WeAdGyyqFjyC_bcN8s5N8-Gu8rgyyXALRLh_wqO_7LcbGb_5aJO1THiU5GJVyGyKlfGFLAM6FTligzLz5h-w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://f8bcz6c3ha.execute-api.ap-south-1.amazonaws.com/uat/select_year",
+					"protocol": "https",
+					"host": [
+						"f8bcz6c3ha",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"select_year"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SummaryOfMonth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData.consultant).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.customer).to.be.a(\"number\");\r",
+							"   pm.expect(jsonData.dispute).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.resolved).to.be.a(\"number\");\r",
+							"     pm.expect(jsonData.meeting).to.be.a(\"number\");\r",
+							"     pm.expect(jsonData.reschedule).to.be.a(\"number\");\r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://f8bcz6c3ha.execute-api.ap-south-1.amazonaws.com/uat/summary/2023/02",
+					"protocol": "https",
+					"host": [
+						"f8bcz6c3ha",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"summary",
+						"2023",
+						"02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MonthlyCountUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://f8bcz6c3ha.execute-api.ap-south-1.amazonaws.com/uat/user_consultant/2023",
+					"protocol": "https",
+					"host": [
+						"f8bcz6c3ha",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"user_consultant",
+						"2023"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/create_token/a703eea5-8e76-11ed-9b13-393c3de754d2",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"create_token",
+						"a703eea5-8e76-11ed-9b13-393c3de754d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listcount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/listcount",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"listcount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report_details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							" pm.expect(jsonData.consultant_category).to.be.a(\"string\");\r",
+							" pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"\r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pkr7bsq5yh.execute-api.ap-south-1.amazonaws.com/uat/report_details/161fece5-414d-11ed-9776-3fe3e51683c1",
+					"protocol": "https",
+					"host": [
+						"pkr7bsq5yh",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"report_details",
+						"161fece5-414d-11ed-9776-3fe3e51683c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer_trigger_email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOTczZWUwZTE2ZjdlZWY0ZjkyMWQ1MGRjNjFkNzBiMmVmZWZjMTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NTY3NDg2LCJ1c2VyX2lkIjoiR2tsVkllVHdIWU9PNXZZazFEUGIweGNhRGVQMiIsInN1YiI6IkdrbFZJZVR3SFlPTzV2WWsxRFBiMHhjYURlUDIiLCJpYXQiOjE2Nzk1Njc0ODYsImV4cCI6MTY3OTU3MTA4NiwicGhvbmVfbnVtYmVyIjoiKzkxNzA1ODY1MDQzMCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxNzA1ODY1MDQzMCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.l4ex3U2OiuJzIIKBnM3a392G9aZYkATyRSlmElFMcStQTt2Tr2iW6qdyrULlDJfH_mzgBroRlcbQ01QYqV6O-GS8E82iOIvQMHYcNIwaKrQgqPlgK0ZCoEJXW_8o9isi8_fvH-BO4LG3nmI1iyHfPvlWB0o_vvAf2YTJwlcCeIhuP4fyToBG9yn8fi60Hy8LD21S7GCSG0lxYxaBFN_Hed2cIetElTt9oscd77JBqO85lI9bzbuRr4oquJCHREbR91WeAdGyyqFjyC_bcN8s5N8-Gu8rgyyXALRLh_wqO_7LcbGb_5aJO1THiU5GJVyGyKlfGFLAM6FTligzLz5h-w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://txo3612uo0.execute-api.ap-south-1.amazonaws.com/uat/customer_trigger_email/a703eea5-8e76-11ed-9b13-393c3de754d2",
+					"protocol": "https",
+					"host": [
+						"txo3612uo0",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"customer_trigger_email",
+						"a703eea5-8e76-11ed-9b13-393c3de754d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark_as_read-Notifications",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"string\");\r",
+							"   });\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"notification_status\":\"read\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://txo3612uo0.execute-api.ap-south-1.amazonaws.com/uat/mark_as_read",
+					"protocol": "https",
+					"host": [
+						"txo3612uo0",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"mark_as_read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification_list_admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData.unread_notification_list).to.be.a(\"array\");\r",
+							"  pm.expect(jsonData.read_notification_list).to.be.a(\"array\");\r",
+							" \r",
+							" \r",
+							"  });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://txo3612uo0.execute-api.ap-south-1.amazonaws.com/uat/notification_list_admin",
+					"protocol": "https",
+					"host": [
+						"txo3612uo0",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"notification_list_admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification_list_consultant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData[1].image).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].notification_type).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].notification_description).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].meeting_id).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].name).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].selected_slot).to.be.a(\"string\");\r",
+							" \r",
+							"  });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY29uc3VsdGFudCIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jbGlja3RvY29uc3VsdC1kZXYiLCJhdWQiOiJjbGlja3RvY29uc3VsdC1kZXYiLCJhdXRoX3RpbWUiOjE2ODA1MDg0NzksInVzZXJfaWQiOiJjM0lUNTRWUERDUUNyblk0dlhZbTZxUlZKWmkxIiwic3ViIjoiYzNJVDU0VlBEQ1FDcm5ZNHZYWW02cVJWSlppMSIsImlhdCI6MTY4MDUwODQ3OSwiZXhwIjoxNjgwNTEyMDc5LCJwaG9uZV9udW1iZXIiOiIrOTE3NTE3MzkzMzE0IiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE3NTE3MzkzMzE0Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.a9fCRgadDnGEaXqBnljzCsN6u_uB0-g68ZY9mI98DfCTN-bacpX7QMWs7gJPSjI42QQJdgYWaBAxvTi8JxcnoftJ20b23zF4J_2kqz8K66f8d0JZGOgdN2aU_jF_ciwzBnXecAGrcwdCQG1DVLfF4ZdlmrWb0-SQfjfGpZ9qQdnlLCYfZxz2ExjDxnPoDzhwDRM4Wq4jg4uKsysla_kLZahiEirVVO3jX8lhR9VbA586Oi-uaZxakcPB2IyY-YMnp49stZD0u0okZRoC0v8D-VrqUI9fonlHRLWB0Y4ODIqfjbMSjQ3lq25wFPjOLLBeilPPwSEyOPwCM4bS_NF5cg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://txo3612uo0.execute-api.ap-south-1.amazonaws.com/uat/notification_list_consultant",
+					"protocol": "https",
+					"host": [
+						"txo3612uo0",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"notification_list_consultant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification_list_customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Verify jsondata response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });\r",
+							"   pm.test(\"verify following keys are present in response\", () => {\r",
+							" pm.expect(jsonData[1].image).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].notification_type).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].notification_description).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].meeting_id).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].name).to.be.a(\"string\");\r",
+							" pm.expect(jsonData[1].selected_slot).to.be.a(\"string\");\r",
+							" \r",
+							"  });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk3OWVkMTU1OTdhYjM1Zjc4MjljZTc0NDMwN2I3OTNiN2ViZWIyZjAiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoiY3VzdG9tZXIiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXVkIjoiY2xpY2t0b2NvbnN1bHQtZGV2IiwiYXV0aF90aW1lIjoxNjc5NjM4MTM5LCJ1c2VyX2lkIjoiSWNWNTRnZzhBZ1Y0bVE2MDN0TVduT2FISHptMSIsInN1YiI6IkljVjU0Z2c4QWdWNG1RNjAzdE1Xbk9hSEh6bTEiLCJpYXQiOjE2ODAxNzkyMzMsImV4cCI6MTY4MDE4MjgzMywicGhvbmVfbnVtYmVyIjoiKzkxODc2Njg5NzgxMSIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxODc2Njg5NzgxMSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.KAOObE9jn5GYYE4br3VlUXg797cQ6tO4AchdGewIXXZVCf1w2B0jbk79CNFZyyN9zZOQ0m8cfE_GA0bCnRo3QhZIMwQ6I8KKnwiU2GgTDrb_epdNIMH1it1CKhIX00q8MzAXK42cECeuchVzO6KV_84CQ0Fgvv3rcxfltO21iL3LVx-V6iEnUEuz_i7a3FHkP0n2nFcJ1Kqy92akswF-Be2PC8SlpcWNdu9ly0Z_fpGvIEdZD_GoooSLwk7AViPytp-2XReKoZobr-r8SZLEMgCOrjtX62nZ5tdEG1QJNcfw3WGTqqDlnKJoK6iHJITTHx4XvM8GBfO4CRgy7BLVEw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://txo3612uo0.execute-api.ap-south-1.amazonaws.com/uat/notification_list_customer",
+					"protocol": "https",
+					"host": [
+						"txo3612uo0",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"uat",
+						"notification_list_customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

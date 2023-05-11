@@ -1,0 +1,742 @@
+{
+	"info": {
+		"_postman_id": "7220a294-07cb-440e-aa2c-5905b364cc9b",
+		"name": "Marxeed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25945750",
+		"_collection_link": "https://restless-zodiac-685020.postman.co/workspace/My-Workspace~1878d54f-e3bc-46f0-8f0d-683c3d9ce34f/collection/25945750-7220a294-07cb-440e-aa2c-5905b364cc9b?action=share&creator=25945750&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "CountOnDashboard",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/status?id=8a8446fa-b362-11ed-9d81-4e893967923a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"status"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8a8446fa-b362-11ed-9d81-4e893967923a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Campaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"keywords\": \"Tech Stacks\",\r\n  \"location\": [\r\n    \"United States\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/invoke",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"invoke"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Campaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"keywords\": \"Stack\",\r\n  \"location\": [\r\n    \"United States\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/invoke",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"invoke"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/history",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Credits",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/credits?org_id=1c4bb41a-8c80-11ed-923c-1e6d4a0b8d7a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"credits"
+					],
+					"query": [
+						{
+							"key": "org_id",
+							"value": "1c4bb41a-8c80-11ed-923c-1e6d4a0b8d7a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reddit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/reddit?id=a2f2a28a-b363-11ed-9d81-4e893967923a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reddit"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "a2f2a28a-b363-11ed-9d81-4e893967923a"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quora",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/quora?id=a2f2a28a-b363-11ed-9d81-4e893967923a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"quora"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "a2f2a28a-b363-11ed-9d81-4e893967923a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stackoverflow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/stackoverflow?id=a2f2a28a-b363-11ed-9d81-4e893967923a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stackoverflow"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "a2f2a28a-b363-11ed-9d81-4e893967923a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/credits/usage?org_id=1c4bb41a-8c80-11ed-923c-1e6d4a0b8d7a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"credits",
+						"usage"
+					],
+					"query": [
+						{
+							"key": "org_id",
+							"value": "1c4bb41a-8c80-11ed-923c-1e6d4a0b8d7a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ebooks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/ebooks?id=a2f2a28a-b363-11ed-9d81-4e893967923a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ebooks"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "a2f2a28a-b363-11ed-9d81-4e893967923a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AI generated blogs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/generate_content/v1/list/a2f2a28a-b363-11ed-9d81-4e893967923a?generate_content=blog",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"generate_content",
+						"v1",
+						"list",
+						"a2f2a28a-b363-11ed-9d81-4e893967923a"
+					],
+					"query": [
+						{
+							"key": "generate_content",
+							"value": "blog"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailSubjectLine",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/generate_content/v1/list/a2f2a28a-b363-11ed-9d81-4e893967923a?generate_content=email_subject_line",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"generate_content",
+						"v1",
+						"list",
+						"a2f2a28a-b363-11ed-9d81-4e893967923a"
+					],
+					"query": [
+						{
+							"key": "generate_content",
+							"value": "email_subject_line"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkpoint",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJraWQiOiJVb01WVk5aR2JjSEVxS2srcTNVRXZFZTJrWThna201UmRIdVF3WFZEYVA4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoibDJFQjY2djhPUmhZTUFOUXhIZjZsdyIsInN1YiI6ImRjZGEzY2Q1LTA5MjAtNGE5Mi1hM2Y2LWUxYjNhMmU3ZGViOSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV9saFU0QkhRcGdfR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbGhVNEJIUXBnIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTc0NDM1ODMzMjE2NTE5OTI1MTkiLCJnaXZlbl9uYW1lIjoiTWFtdGEgIiwibm9uY2UiOiIzcDNxOHBZYXg3endUOHZTN2VEN1R3QXljODFVb05aZnFfbTlSS0Q0aHNocFVTekx3eWNzM0VRTnZhdmRHQW5iNEJqVWkzeDc4NmRJUDR4ZDJaQlNzR2twczN6RXU1SERVZjdidzhLZXd4TW1nQTJyeTlyQlNzN3FvVUY0YXB2bXN2MnpWZTVETTBNMGdfSnBzeXZpTGZGRGp0cXA3RGlESldFOW5zeW1Ja28iLCJvcmlnaW5fanRpIjoiMTQyMzQ0ZjUtMzY0MC00MTU5LWI2Y2YtZGU2MmM3YjE4MDc0IiwiYXVkIjoiNDBvdGo5M3Ezbzd2bDMxdm12NGhvZmY2ZiIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6IjExNzQ0MzU4MzMyMTY1MTk5MjUxOSIsInByb3ZpZGVyTmFtZSI6Ikdvb2dsZSIsInByb3ZpZGVyVHlwZSI6Ikdvb2dsZSIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzI5Nzk2MjI1ODEifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjc3MjI1NjkwLCJleHAiOjE2NzczMTIwOTAsImlhdCI6MTY3NzIyNTY5MCwiZmFtaWx5X25hbWUiOiJLYWx3YWRlIiwianRpIjoiMDM4MmU4YmEtYzEzMi00OGE3LWE0ZTQtZjI3MjIxZGVlMDcwIiwiZW1haWwiOiJtYW10YS5rYWx3YWRlQGFwcGxpZWRhaWNvbnN1bHRpbmcuY29tIn0.AwVPn6a28e-vO0u1gVIaC9LksogovUSKHJxIRKVTtw_kMfDL0xmeiJA7MptVtwEIJP1WJt6UKIiBVqaVK8q1TFVV0nOsPsbrUEBPLr-Y3qxn-1jGohwPkC7AAal4DpTQOzCi3MAeFaxan9IrjuNh7E_qNQkBeJ19OFBW0kmlmA-X8OQ6r3VHcudTFrmVnWlJq28Ml04kbp5eL8k-a3m7WRPrI9poNGHsUtGtaSJiM6kmIVSd-k9YSkaaTZ5JSnZ8_ivu3ANuTRbIIpuhnqTomJANYZ--WTSN7nDr-_B0zmZCSho-AwimcW6RUP-d5XpWh5Qz7Jtjgdkvkb8CecsdGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.dev.marxeed.com/api/v1/checkpoint?id=a2f2a28a-b363-11ed-9d81-4e893967923a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"marxeed",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"checkpoint"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "a2f2a28a-b363-11ed-9d81-4e893967923a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://login-marxeed-dev.auth.us-east-1.amazoncognito.com/oauth2/token?grant_type=authorization_code&code=d20690f2-5d9c-48ce-8d8d-c0007ccd08a3&client_id=40otj93q3o7vl31vmv4hoff6f&redirect_uri=https://app.dev.marxeed.com&code_verifier=0AdUQpxOLFGOynMi4pHB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://login-marxeed-dev.auth.us-east-1.amazoncognito.com/oauth2/token?grant_type=authorization_code&code=d20690f2-5d9c-48ce-8d8d-c0007ccd08a3&client_id=40otj93q3o7vl31vmv4hoff6f&redirect_uri=https://app.dev.marxeed.com&code_verifier=0AdUQpxOLFGOynMi4pHBg7VPFc0nIUCAgzdsbm06QoGT1P9nNCCOrtr1hsDUhXnwXmiDgQR5WhMVsrldRnUSuHJB5ZP8oELqKXzIKjxrHyzsd71lxRbjc0CFWopVmku1",
+					"protocol": "https",
+					"host": [
+						"login-marxeed-dev",
+						"auth",
+						"us-east-1",
+						"amazoncognito",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "code",
+							"value": "d20690f2-5d9c-48ce-8d8d-c0007ccd08a3"
+						},
+						{
+							"key": "client_id",
+							"value": "40otj93q3o7vl31vmv4hoff6f"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://app.dev.marxeed.com"
+						},
+						{
+							"key": "code_verifier",
+							"value": "0AdUQpxOLFGOynMi4pHBg7VPFc0nIUCAgzdsbm06QoGT1P9nNCCOrtr1hsDUhXnwXmiDgQR5WhMVsrldRnUSuHJB5ZP8oELqKXzIKjxrHyzsd71lxRbjc0CFWopVmku1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
